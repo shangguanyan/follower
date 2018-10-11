@@ -62,7 +62,7 @@ def login(mobile):
     print(cookie)
 
     cookiestr = ';'.join(item for item in cookie)
-    with open('aa','w+') as f:
+    with open('aa','a+') as f:
         f.write("mobile"+mobile+":"+cookiestr+"\n")
     return cookiestr
 
