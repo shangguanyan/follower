@@ -87,12 +87,20 @@ def guanzhuSGY():
     )
     select_name.click()
     time.sleep(3)
+    userButton = wait.until(
+        ec.presence_of_element_located(
+            (by.CSS_SELECTOR,"#pl_feed_main > div.m-wrap > div.m-con-r > div:nth-child(1) > div > div.card-content.s-pg12 > div > div.info > div > a")
+        )
+    )
+    userButton.click()
+    time.sleep(3)
     guanzhuButton = wait.until(
         ec.presence_of_element_located(
-            (by.CSS_SELECTOR,"#pl_feedlist_index > div:nth-child(1) > div:nth-child(1) > div > div.info > div > a.s-btn-c")
+            (by.CSS_SELECTOR,"#Pl_Official_Headerv6__1 > div.PCD_header > div > div.shadow.S_shadow > div.pf_opt > div > div:nth-child(1) > a:nth-child(1)")
         )
     )
     guanzhuButton.click()
+
 
 import operator
 def isExit(mobile):
